@@ -43,7 +43,7 @@ Une fois le fichier sauvegardé il est maintenant temps d’aller activer le plu
 ##Base de données
 Voici le code pour créer la base de données de notre plugin. Rajoutez-le à la suite.
 
-{% highlight php %}
+{% highlight php startinline  %}
 
 function mon_plugin_installation() {
     global $table_prefix, $wpdb;
@@ -80,7 +80,7 @@ Maintenant, si vous allez dans votre menu admin la base de données devrait êtr
 Une fois que notre base de données est créée, il est maintenant temps de créer un menu et une page d’administration pour pouvoir la peupler.
 Premièrement, la fonction qui va créer le menu
 
-{% highlight php %}
+{% highlight php startinline %}
 
 function mon_plugin_menu() {
     add_menu_page("Mon Plugin", "Mon Plugina", 1, "mon_plugin", "mon_plugin_view");
@@ -98,7 +98,7 @@ add_action(‘admin_menu’, ‘mon_plugin_menu’);
 ##Page d’administration
 On va maintenant crée une page d’administration. D’abord, crée une nouvelle fonction et on la nomme mon_plugin_admin cette fonction va lancer tous les scripts requis pour notre page.
 
-{% highlight php %}
+{% highlight php  startinline %}
 
 function mon_plugin() {
     wp_register_style('mon_plugin_style', plugins_url('/mon_plugin_style.css', __FILE__));
@@ -113,7 +113,7 @@ function mon_plugin() {
 
 Dans cette fonction, on enregistre et on dit d’utiliser le fichier css de notre plugin. On invoque également Thickbox qui permet d’afficher notre menu dans le même style que WordPress utilise par défaut. Post sert à envoyé les donné.
 
-{% highlight php %}
+{% highlight php startinline %}
 
 function mon_plugin_view() {
     include('mon_plugin_view.php');
