@@ -2,6 +2,7 @@
 layout: post
 title: Test
 category: test
+tag: blog
 ---
 
 test contenue bla bla

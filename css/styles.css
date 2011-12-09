@@ -4,7 +4,7 @@
 
 body {
 
-  background:url(white_texture.png);
+  background:url(/images/white_texture.png);
   border-top:10px solid #00243e;
       }
       .container{
@@ -23,6 +23,7 @@ h2{
   font-family: 'Droid Sans', sans-serif;
   font-size:30px;
   margin: 20px 0;
+  text-transform:uppercase;
 }
 h2 a, h2 a:hover {
   color: #00243e;
@@ -57,21 +58,7 @@ h1{
   height:100px;
 }
 
-/* body */
 
-#bd{
-  clear: both;
-  min-height: 300px;
-  padding-top:20px;
-}
-#main{
-  width:65%;
-  margin:auto;
-  margin-top: 70px;
-}
-#main h2 a,h2{
-  color:#00243e;
-}
 /* blog */
 .post{
   margin: 80px 0;
@@ -80,6 +67,10 @@ h1{
   font-family:georgia,serif;
   font-size: 16px;
   line-height: 36px;
+}
+.date{
+  font-size:12px;
+  color:#9d9d9d;
 }
 /* nav */
 .menu{
@@ -105,7 +96,7 @@ h1{
 .social a{
   width:16px;
   height:16px;
-  background: url(social.png);
+  background: url(/images/social.png);
   display:inline-block;
 
 }

@@ -1,0 +1,9 @@
+---
+layout: post
+title: About me
+category: about
+---
+
+I am a passionate Web developper. I code mostly in Ruby and Javascript, but I also know Java, PHP and more. 
+I am studying at UQAM ( Université du Québec À Montréal )
+I make beautiful, fast and user-friendly web sites.
