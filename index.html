@@ -4,13 +4,13 @@ title: Alexcp Web Design & Development
 ---
         {% for post in site.tags.blog %}
           <div class="post">
-            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <h2><a href="/alexcp-blog{{ post.url }}">{{ post.title }}</a></h2>
             <div class="date">
             {{ post.date | date_to_string }}
             </div>
             <div class="content">
               {{ post.content | truncate: 300 }}
             </div>
-              <a class="g-button" href="{{post.url}}">Read more &raquo;</a>
+              <a class="g-button" href="/alexcp-blog{{post.url}}">Read more &raquo;</a>
           </div>
         {% endfor %}

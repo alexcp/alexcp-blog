@@ -16,3 +16,15 @@ def foo
   puts 'foo'
 end
 {% endhighlight %}
+
+test 2
+{% highlight ruby %}
+def index
+  @tasks = Task.all
+  respond_to do |format|
+    format.html # index.html.erb
+    format.xml  { render :xml => @tasks }
+  end
+end
+{% endhighlight %}
+
