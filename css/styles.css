@@ -4,7 +4,7 @@
 
 body {
 
-  background:url(/images/white_texture.png);
+  background:url(/alexcp-blog/images/white_texture.png);
   border-top:10px solid #00243e;
       }
       .container{
@@ -96,7 +96,7 @@ h1{
 .social a{
   width:16px;
   height:16px;
-  background: url(/images/social.png);
+  background: url(/alexcp-blog/images/social.png);
   display:inline-block;
 
 }
