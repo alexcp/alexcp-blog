@@ -4,7 +4,7 @@
 
 body {
 
-  background:url(/alexcp-blog/images/white_texture.png);
+  background:url(/images/white_texture.png);
   border-top:10px solid #00243e;
       }
       .container{
@@ -41,7 +41,10 @@ button.g-button, a.g-button, input[type=submit].g-button {
   text-shadow: 0px 1px 1px rgba(255,255,255,1);
   line-height: 1;
 }
-
+.content h2{
+  font-size:16px;
+  font-family: Georgia, serif;
+}
 
 /* header */
 h1{
@@ -103,7 +106,7 @@ h1{
 .social a{
   width:16px;
   height:16px;
-  background: url(/alexcp-blog/images/social.png);
+  background: url(/images/social.png);
   display:inline-block;
 
 }

@@ -1,4 +1,4 @@
-baseurl:    /alexcp-blog/
+baseurl:    /
 permalink:   none
 markdown: rdiscount
 pygments: true
