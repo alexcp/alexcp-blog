@@ -2,128 +2,128 @@
 /* ! Layout for desktop version   */
 /* ============================== */
 
-	body {
+body {
 
-          background:url(white_texture.png);
-          border-top:10px solid #00243e;
-	}
-        .container{
-      margin-top:20px;
-    }
-/*ancien style*/
-a{
+  background:url(white_texture.png);
+  border-top:10px solid #00243e;
+      }
+      .container{
+        margin-top:20px;
+  }
+  /*ancien style*/
+  a{
     text-decoration: none;
     background: none;
 }
 a:hover{
-    text-decoration: none;
-    background: none;
+  text-decoration: none;
+  background: none;
 }
 h2{
-    font-family: 'Droid Sans', sans-serif;
-    font-size:30px;
-    margin: 20px 0;
+  font-family: 'Droid Sans', sans-serif;
+  font-size:30px;
+  margin: 20px 0;
 }
 button.g-button, a.g-button, input[type=submit].g-button {
-    padding: 4px 5px;
-    -webkit-border-radius: 2px 2px;
-    border: solid 1px rgb(153, 153, 153);
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(255, 255, 255)), to(rgb(221, 221, 221)));
-    color: #333;
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    text-shadow: 0px 1px 1px rgba(255,255,255,1);
-    line-height: 1;
+  padding: 4px 5px;
+  -webkit-border-radius: 2px 2px;
+  border: solid 1px rgb(153, 153, 153);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(255, 255, 255)), to(rgb(221, 221, 221)));
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  text-shadow: 0px 1px 1px rgba(255,255,255,1);
+  line-height: 1;
 }
 
 
 /* header */
 h1{
-    font-family: 'Droid Sans', sans-serif;
-    font-size: 20px;
-    display:inline;
-    float:right;
-    margin-top:32px;
-    color:#fff;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 20px;
+  display:inline;
+  float:right;
+  margin-top:32px;
+  color:#fff;
 }
 #header{
-    width:90%;
-    margin:auto;
-    height:100px;
+  width:90%;
+  margin:auto;
+  height:100px;
 }
 
 /* body */
 
 #bd{
-    clear: both;
-    min-height: 300px;
-    padding-top:20px;
+  clear: both;
+  min-height: 300px;
+  padding-top:20px;
 }
 #main{
-    width:65%;
-    margin:auto;
-    margin-top: 70px;
+  width:65%;
+  margin:auto;
+  margin-top: 70px;
 }
 #main h2 a,h2{
-    color:#00243e;
+  color:#00243e;
 }
 /* blog */
 .post{
-    margin: 80px 0;
+  margin: 80px 0;
 }
 .content,p{
-    font-family:georgia,serif;
-    font-size: 16px;
-    line-height: 36px;
+  font-family:georgia,serif;
+  font-size: 16px;
+  line-height: 36px;
 }
 /* nav */
 .menu{
-    text-align: center;
-    margin:40px 0;
+  text-align: center;
+  margin:40px 0;
 }
 .menu a{
-    font-family: 'Droid Sans', sans-serif;
-    color:#9d9d9d;
-    font-size: 25px;
+  font-family: 'Droid Sans', sans-serif;
+  color:#9d9d9d;
+  font-size: 25px;
 }
 .menu a:hover{
-    color:#00243e;
+  color:#00243e;
 }
 /* footer */
 
 .footer p{
-    font-size: 12px;
-    margin-top:50px;
-    margin-left:20px;
-    font-family: 'Courier New', monospace;
+  font-size: 12px;
+  margin-top:50px;
+  margin-left:20px;
+  font-family: 'Courier New', monospace;
 }
 .social a{
-    width:16px;
-    height:16px;
-    background: url(social.png);
-    display:inline-block;
+  width:16px;
+  height:16px;
+  background: url(social.png);
+  display:inline-block;
 
 }
 .social li{
-    display: inline;
+  display: inline;
 
 }
 .social{
-    margin-left:75px;
+  margin-left:75px;
 }
 .twitter a{
-    background-position: -32px 0;
+  background-position: -32px 0;
 }
 .facebook a{
-    background-position: -16px 0;
+  background-position: -16px 0;
 }
 .forrst a{
-    background-position: -64px 0;
+  background-position: -64px 0;
 }
 .email a{
-    background-position: -48px 0;
+  background-position: -48px 0;
 }
 
 /* ============================= */
