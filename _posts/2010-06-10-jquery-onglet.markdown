@@ -22,7 +22,7 @@ ici, il s’agit ici de la version 1.4.2
 
 Il existe des tonnes de solutions possibles pour faire créer des onglets. Je vous présente la mienne.
 
-HTML
+##HTML
 
 {% highlight html %}
 
@@ -41,7 +41,7 @@ HTML
 
 On créer tout simplement une liste, notre menu et une boîte ou apparaîtra notre contenu.
 
-Le CSS:
+##Le CSS:
 
 {% highlight css %}
 

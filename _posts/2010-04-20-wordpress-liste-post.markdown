@@ -6,7 +6,8 @@ tag: blog
 ---
 
 Voici un petit truc pour faire une liste de liens avec les postes qui sont dans la même catégorie. Avec ça on peut donc créer un “sidebar” dynamique.
-Comment ça fonctionne?
+
+##Comment ça fonctionne?
 
 Premièrement, il faut trouver la catégorie du poste ou de la page actuelle.
 Ensuite on donne la variable $c_name pour le nom de la categorie.
@@ -21,7 +22,8 @@ Ensuite on donne la variable $c_name pour le nom de la categorie.
 
 {% endhighlight %}
 
-Ensuite on créer notre liste.
+###Ensuite on créer notre liste.
+
  J’ai mis le nom de la catégorie dans un tag h2.
 Pour afficher le tout, j’ai commencé par créer une div.
 
@@ -37,7 +39,7 @@ Pour afficher le tout, j’ai commencé par créer une div.
                 <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
         <?php endforeach;?>
     </ul>
-	
+
 {% endhighlight %}
 
 Et voilà, après on peu stylé facilement le tout en css.
