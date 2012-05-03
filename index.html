@@ -2,6 +2,17 @@
 layout: default
 title: Alexcp Web Design & Development
 ---
+
+<div class="row-fluid" id="main">
+  <div class="span2">
+    <br />
+  </div>
+  <div class="span8">
+      <ul class="nav nav-pills">
+        <li class="active"><a href="/">Blog</a></li>
+        <li><a href="about">About</a></li>
+      </ul>
+
         {% for post in site.tags.blog %}
           <div class="post">
             <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
@@ -9,9 +20,12 @@ title: Alexcp Web Design & Development
             {{ post.date | date_to_string }}
             </div>
             <div class="content">
-              {{ post.content | truncate: 300 }}
+              {{ post.content | truncate: 500 }}
             </div>
             <br />
-              <a class="g-button" href="{{post.url}}">Read more &raquo;</a>
+              <a class="btn" href="{{post.url}}">Read more &raquo;</a>
           </div>
+          <br />
         {% endfor %}
+      </div>
+    </div>
