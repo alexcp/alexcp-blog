@@ -2,36 +2,18 @@
 layout: default
 title: Alexcp Web Developer
 ---
-<div class="row-fluid">
-  <div class="span2">
-    <br />
-  </div>
-  <div class="span3 menu">
-      <a class="btn btn-inverse" href="/">Blog</a>
-      <a class="btn btn-inverse" href="about">About</a>
-      <br />
-      <br />
-  </div>
-</div>
 
-<div class="row-fluid" id="main">
-  <div class="span2">
-    <br />
+{% for post in site.tags.blog %}
+<div class="post">
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <div class="date">
+    {{ post.date | date_to_string }}
   </div>
-  <div class="span8">
-    {% for post in site.tags.blog %}
-    <div class="post">
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <div class="date">
-        {{ post.date | date_to_string }}
-      </div>
-      <div class="content">
-        {{ post.content | truncate: 500 }}
-      </div>
-      <br />
-      <a class="btn" href="{{post.url}}">Read more &raquo;</a>
-    </div>
-    <br />
-    {% endfor %}
+  <div class="content">
+    {{ post.content | truncate: 500 }}
   </div>
+  <br />
+  <a class="btn" href="{{post.url}}">Read more &raquo;</a>
 </div>
+<hr />
+{% endfor %}

@@ -11,39 +11,17 @@ Si vous ne connaissez pas Jquery, il s’agit d’une bibliothèque javascript t
 
 Pour activer Jquery, placez tout simplement ce lien dans la partie “head” de votre page :
 
-{% highlight html %}
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js">
-</script>
-
-{% endhighlight %}
-
 ici, il s’agit ici de la version 1.4.2
 
 Il existe des tonnes de solutions possibles pour faire créer des onglets. Je vous présente la mienne.
 
-##HTML
-
-{% highlight html %}
-
-<ul class="menu">
-    <li><a href="#tab1">lien 1</a></li>
-    <li><a href="#tab2">lien 2</a></li>
-    <li><a href="#tab3">lien 3</a></li>
-</ul>
-<div id="conteneur">
-    <div id="tab1" class="contenu">1</div>
-    <div id="tab2" class="contenu">2</div>
-    <div id="tab3" class="contenu">3</div>
-</div>
-
-{% endhighlight %}
+<h3>HTML</h3>
 
 On créer tout simplement une liste, notre menu et une boîte ou apparaîtra notre contenu.
 
-##Le CSS:
+<h3>CSS</h3>
 
-{% highlight css %}
+<pre class="prettyprint">
 
 .menu{
   list-style-type:none;
@@ -63,15 +41,14 @@ padding:10px 10px 10px 10px;
 .active {
   text-decoration:underline;
 }
-
-{% endhighlight %}
+</pre>
 
 Comme vous le voyez, c’est très facile d’y ajouter des modifications.
 
 
 Maintenant le javascript:
 
-{% highlight javascript %}
+<pre class="prettyprint">
 
 $(document).ready(function() { //Quand le document est prêt
     $(".contenu").hide();  //Cache tout les div avec la classe contenue
@@ -94,7 +71,7 @@ $(document).ready(function() { //Quand le document est prêt
     });
 });
 
-{% endhighlight %}
+</pre>
 
 Voilà, il n’y a pas de limites à ce qu’on peut faire ensuite.
 

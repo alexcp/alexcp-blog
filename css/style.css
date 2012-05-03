@@ -3,12 +3,12 @@
   padding-top:20px;
 }
 
-#main{
+.hero-unit{
   background:#E9E9F2;
-  padding:0 10px;
 }
 h2{
   font-size:26px;
+  line-height:46px;
 }
 
 h2 a{
@@ -17,7 +17,4 @@ h2 a{
 .content{
   font-size:16px;
   line-height:30px;
-}
-.post{
-  margin:40px 0;
 }
