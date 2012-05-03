@@ -5,4 +5,19 @@
 
 #main{
   background:#E9E9F2;
+  padding:0 10px;
+}
+h2{
+  font-size:26px;
+}
+
+h2 a{
+  color:#000;
+}
+.content{
+  font-size:16px;
+  line-height:30px;
+}
+.post{
+  margin:40px 0;
 }
