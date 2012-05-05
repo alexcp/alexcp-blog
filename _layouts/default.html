@@ -11,6 +11,7 @@
 
     <!-- The 1140px Grid - http://cssgrid.net/ -->
     <link rel="stylesheet" href="/css/1140.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/cabin.css" type="text/css" media="screen" />
     <!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
     <script type="text/javascript" src="/js/css3-mediaqueries.js"></script>
 
@@ -21,18 +22,23 @@
     <![endif]-->
   </head>
   <body onload="prettyPrint()" >
-    <div class="container">
+    <div id="main" class="container">
       <div class="row">
-        <h1><a href="/">alexcp</a></h1>
+        <h1><a href="/"><img src="/img/alexcp_web_developer_from_montreal_ruby_rails.png" alt="alexcp web developer from montreal ruby" /></a></h1>
       </div>
       <div class="row">
-        <a href="/about_me.html">About</a>
+        <a href="/">Blog</a>
+        <a href="/about_me.html">About Me</a>
       </div>
       <div class="row">
         {{content}}
       </div>
-
     </div>
+    <div id="footer" class="container">
+      <div  class="row">
+        <img src="/img/alexcpfoot.png" />
+      </div>
+      </div>
     <script src="/js/prettify.js"></script>
   </body>
 </html>

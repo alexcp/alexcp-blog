@@ -2,6 +2,7 @@ body {
     font-size: 17px;
     line-height: 30px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background:#CB0004;
 }
 article {
     max-width: 944px;
@@ -19,6 +20,17 @@ h2 {
     margin-top: 60px;
     margin-bottom: 30px;
 }
+h2 a{
+  color:#000 !important;
+}
+h2 a:hover{
+  color:#CB0004 !important;
+  text-decoration:none;
+}
+a{
+  color:#CB0004;
+  font-weight:bold;
+}
 h3 {
     font-size: 28px;
     line-height: 30px;
@@ -34,4 +46,11 @@ small, aside {
 }
 #aboutme{
   margin-top:80px;
+}
+#main{
+  background:#EDEDED;
+  padding-bottom:140px;
+}
+#footer{
+  margin:20px 0;
 }
