@@ -1,0 +1,37 @@
+body {
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+article {
+    max-width: 944px;
+    margin: auto;
+}
+h1 {
+    font-size: 132px;
+    line-height: 150px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+h2 {
+    font-size: 47px;
+    line-height: 60px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+h3 {
+    font-size: 28px;
+    line-height: 30px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+p, ul {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+small, aside {
+    font-size: 10px;
+}
+#aboutme{
+  margin-top:80px;
+}
