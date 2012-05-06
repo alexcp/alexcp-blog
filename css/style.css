@@ -54,3 +54,10 @@ small, aside {
 #footer{
   margin:20px 0;
 }
+#footer_links a{
+  color:#fff;
+  font-weight:normal;
+}
+code{
+  background:#fff;
+}
