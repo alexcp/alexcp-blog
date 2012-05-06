@@ -1,0 +1,53 @@
+---
+layout: post
+title: Getting more out of Git
+category:
+tag: blog
+---
+
+Git is an awesome tool, here are some tips to get even more out of it. Of course theses apply only for the command line version of Git.
+
+<h3>Global .gitignore file</h3>
+
+You can make a global .gitignore file to excludes common filetypes that you know you don't want or don't need to track.
+To set it up you can run this command:
+<pre class="prettyprint">$ git config --global core.excludesfile path-to-your-excludes-file</pre>
+
+<a href="https://github.com/alexcp/gitconfig/blob/master/.gitignore_global">Here is my gitignore file</a>
+
+
+<h3>Git colors</h3>
+You can add color to your git output by running this command:
+<pre class="prettyprint">$ git config color.ui true</pre>
+
+<h3>Git add --all</h3>
+The command <code>git add --all</code> is a really great command, with it you can add a full directory, new, deleted or updated files.
+My alias is <code>git aa</code>
+<pre class="prettyprint">$ git config --global alias.aa 'add --all'</pre>
+
+<h3>Git diff --cached</h3>
+This command allow you to see the diff of the staged files.
+My alias is <code>git dc</code>
+<pre class="prettyprint">$ git config --global alias.dc 'git diff --cached'</pre>
+
+<h3>Stage parts of files</h3>
+If you add the '-p' flag to <code>git add</code> or <code>git add --all</code> you will see the diff of each files one by one, you can then type 's' to split the file and choose 'y' or 'n' to stage the file or ignore the changes. You can press '?' to get a list of all the options.
+This command  is extremely useful to make good and relevant commits.
+
+<h3>Stashing</h3>
+If you don't want to commit your work in progress but need to switch branch, or work on something else temporarily, you can <code>git stash</code> your working directory and reapply these changes later.
+Use <code>git stash apply</code> to apply your last stash.
+If you have more than one stash, you can issue the command 'git stash list' to see your stack and use the command <code>git stash apply stash@{#}</code> to apply the stash that you want.
+
+<h3>Rebase</h3>
+With the command <code>git rebase</code> you can apply all the commit of branch on top of the current branch.
+When you merge a branch with <code>git merge</code> it creates "merge bubbles", you have points in your history where a bunch of changes are applied at the same time, if a bug is introduced, it's really hard to find which commit is responsible.
+
+It is a quite complex subject so I would recommend reading more about it <a href="http://book.git-scm.com/4_rebasing.html">here </a>
+
+<h3>Prettier Output</h3>
+You can use this command to get Prettier git log output
+<pre class="prettyprint">pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset</pre>
+
+
+That's all for now, I invite you to have a look at my <a href="https://github.com/alexcp/gitconfig">GitConfigs on Github</a>
