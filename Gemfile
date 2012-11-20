@@ -1,4 +1,4 @@
 source :rubygems
 
-gem 'RedCloth'
+gem 'maruku'
 gem 'jekyll'

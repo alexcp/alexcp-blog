@@ -58,6 +58,6 @@ small, aside {
   color:#fff;
   font-weight:normal;
 }
-code{
-  background:#fff;
+pre code{
+  border: 1px solid #E0E0E0;
 }

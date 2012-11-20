@@ -14,13 +14,13 @@ I will show an example with a simple hello world C program.
 
 <h3>Getting Started</h3>
 First, we need to install the cucumber and rspec gem
-<pre class="prettyprint">gem install cucumber && gem install rspec</pre>
+<pre><code>gem install cucumber && gem install rspec</code></pre>
 
 I began by creating a hello.feature file inside a features directory.
 
 Here is what I wrote inside.
 
-<pre class="prettyprint">
+<pre><code>
 Feature: hello world
  In order to know it work
  As a User
@@ -35,7 +35,7 @@ Feature: hello world
   Given I have compiled the program
   When I execute it with ""
   Then the output should be "Hello"
-</pre>
+</code></pre>
 
 The two scenario are pretty straightforward, I want to compile and execute the program with and without an argument.
 
@@ -46,7 +46,7 @@ To implement our test, we need to create a new directory inside our feature dire
 We then create a file named hello_steps.rb
 Here is the content of this file:
 
-<pre class="prettyprint">
+<pre><code>
 # execute a command and return the result in a string.
 def command_output_to_s(system_command)
   IO.popen(system_command,:err=>[:child,:out]).read.gsub(/\n/,' ').rstrip
@@ -67,13 +67,13 @@ end
 Then /^the output should be "(.*?)"$/ do |text|
     @result.should eq(text)
 end
-</pre>
+</code></pre>
 
 We can run our test and watch it fails.
 Now all we need to do is to write the implementation in c
 
 Here is my c code
-<pre class="prettyprint">
+<pre><code>
 #include<stdio.h>
 
 int main(int argc, char *argv[]){
@@ -83,6 +83,6 @@ int main(int argc, char *argv[]){
   }
   return 0;
 }
-</pre>
+</code></pre>
 
 Of course this is an extremly basic example but it should be a good foundation to build upon.
