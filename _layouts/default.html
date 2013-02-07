@@ -1,44 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>alexcp</title>
+    <title>AlexCP = Alexandre Croteau-Pothier a Montreal based developper</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alexcp Developer from montreal">
+    <meta name="description" content="Alexandre Croteau-Pothier a Montreal based developper">
     <meta name="author" content="Alexandre Croteau-Pothier">
-    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
-    <script type="text/javascript" src="https://s3.amazonaws.com/alexcp/css3-mediaqueries.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/github.css" rel="stylesheet">
     <link href="/css/alexcp.css" rel="stylesheet">
-    <script src="/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
   <body>
-    <div id="main" class="container">
-      <div class="row">
-        <h1><a href="/"><img src="https://s3.amazonaws.com/alexcp/alexcp_web_developer_from_montreal_ruby_rails.png" alt="alexcp web developer from montreal ruby" /></a></h1>
+    <div class="container">
+
+      <div id="header" class="row">
+        <div class="span2">
+          <a href="/">
+            <img src="/img/alexcp_web_developer_from_montreal_ruby_rails.png" alt="alexcp web developer from montreal ruby" width="177" height="66" />
+          </a>
+        </div>
+
+        <br />
+        <ul class="nav nav-pills offset6">
+          <li><a href="/">Blog</a></li>
+          <li><a href="/about_me.html">About Me</a></li>
+        </ul>
+      <hr />
       </div>
-      <div class="row">
-        <a href="/">Blog</a>
-        <a href="/about_me.html">About Me</a>
-      </div>
+
+
       <div class="row">
         {{content}}
       </div>
+
+    <div id="push"></div>
     </div>
-    <div id="footer" class="container">
-      <div  class="row">
-        <div class="ninecol">
-          <img src="https://s3.amazonaws.com/alexcp/alexcp_developer_ruby_montreal.png" alt="alexcp is a developer from montreal who loves ruby, vim and linux" title="alexcp is a developer from montreal who loves ruby, vim and linux" />
-        </div>
-        <div id="footer_links" class="threecol last">
-          <a  href="mailto:alexcp.com@gmail.com">E-Mail</a>
-          <a  href="https://github.com/alexcp">Github</a>
-          <a  href="https://twitter.com/#!/AlexCP_">Twitter</a>
+
+    <div id="footer">
+      <div class="container">
+        <div id="row">
+          <p class="muted credit">Reach me by <a href="mailto:alexcp.com@gmail.com">E-Mail</a>, Find me on <a href="https://github.com/alexcp">Github</a> or Follow me on <a href="https://twitter.com/#!/AlexCP_">Twitter</a> 
+           &#169; Alexandre Croteau-Pothier 2013</p>
         </div>
       </div>
     </div>
+
   </body>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </html>
