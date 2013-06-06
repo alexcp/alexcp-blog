@@ -2,3 +2,7 @@ baseurl:    /
 permalink:   none
 exclude:  [ Gemfile, Gemfile.lock, Procfile, vendor]
 markdown: maruku
+assets:
+  compress:
+    js: uglifier
+    css: sass

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Alexandre Croteau-Pothier a Montreal based developper">
     <meta name="author" content="Alexandre Croteau-Pothier">
-    <link href="http://s3.amazonaws.com/alexcp/css/alexcp.min.css" rel="stylesheet">
+    {% stylesheet app %}
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -49,7 +49,6 @@
     </div>
 
   </body>
-  <script src="http://s3.amazonaws.com/alexcp/js/bootstrap.min.js"></script>
-  <script src="http://s3.amazonaws.com/alexcp/js/highlight.pack.js"></script>
+  {% javascript app %}
   <script>hljs.initHighlightingOnLoad();</script>
 </html>
