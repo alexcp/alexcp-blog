@@ -1,5 +1,6 @@
 baseurl:    /
 permalink:   none
+pygments: true
 exclude:  [ Gemfile, Gemfile.lock, Procfile, vendor]
 markdown: maruku
 assets:
