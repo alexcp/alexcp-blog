@@ -5,7 +5,7 @@ category:
 tag: blog
 ---
 
-Le refactoring c'est l'amélioration du code en consèrvant les fonctionnalitées déjà présente, on simplifie et on s'assure que le code sera facile a modifier dans le future.
+Le refactoring c'est l'amélioration du code en conservant les fonctionnalitées déjà présente, on simplifie et on s'assure que le code sera facile a modifier dans le future.
 
 ### Code smells
 

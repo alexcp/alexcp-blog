@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Alexandre Croteau-Pothier a Montreal based developper">
     <meta name="author" content="Alexandre Croteau-Pothier">
+    <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
     {% stylesheet app %}
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,37 +16,46 @@
   </head>
   <body>
     <div id="wrap">
-    <div class="container">
 
-      <div id="header" class="row">
-        <div class="span2">
-          <a href="/">
-            <img src="http://s3.amazonaws.com/alexcp/img/alexcp_web_developer_from_montreal_ruby_rails.png" alt="alexcp web developer from montreal ruby" width="177" height="66" />
-          </a>
+      <div id="header">
+        <div class="container">
+          <div class="row-fluid">
+          <div class="span6 logo">
+            <a href="/">
+              <h1>alexcp</h1>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="row-fluid">
+          <div class="span2 sidebar hidden-phone">
+            <img src="https://secure.gravatar.com/avatar/613fc7a2a0ce18abb0f7ea678540dfbc?size=100" title="alexandre croteau pothier ruby developer from montreal" alt="alexandre croteau pothier ruby developer montreal" class="img-circle" width="100" height="100" />
+            <ul>
+              <li><h5>Alexandre Croteau-Pothier</h5></li>
+              <li><p>Web Developer from Montreal. Loves Ruby, Linux, Vim and Traveling.</p></li>
+              <li><a href="https://github.com/alexcp">alexcp</a></li>
+              <li><a href="https://twitter.com/#!/AlexCP_">@alexcp_</a></li>
+            </ul>
+          </div>
+
+          <div class="span10">
+            {{content}}
+          </div>
         </div>
 
-        <br />
-        <ul class="nav nav-pills offset6">
-          <li><a href="/">Blog</a></li>
-          <li><a href="/about_me.html">About Me</a></li>
-        </ul>
-      <hr />
       </div>
-
-
-      <div class="row">
-        {{content}}
-      </div>
-
-    </div>
-    <div id="push"></div>
+      <div id="push"></div>
     </div>
 
     <div id="footer">
       <div class="container">
         <div id="row">
-          <p class="muted credit">Reach me by <a href="mailto:alexcp.com@gmail.com">E-Mail</a>, Find me on <a href="https://github.com/alexcp">Github</a> or Follow me on <a href="https://twitter.com/#!/AlexCP_">Twitter</a> 
-           &#169; Alexandre Croteau-Pothier 2013</p>
+          <p class="muted credit">
+            &#169; Alexandre Croteau-Pothier 2013</p>
         </div>
       </div>
     </div>

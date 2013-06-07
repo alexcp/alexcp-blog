@@ -6,8 +6,10 @@ title: Alexcp Web Developer from Montreal
 {% for post in site.tags.blog %}
 
 <p class="post_link">
-  <a href="{{ post.url }}">{{ post.title }}</a>
-  <small>{{ post.date | date_to_string }}</small>
+  <h3>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <small>{{ post.date | date_to_string }}</small>
+  </h3>
 </p>
 <hr />
 {% endfor %}
