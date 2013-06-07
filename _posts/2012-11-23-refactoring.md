@@ -5,7 +5,7 @@ category:
 tag: blog
 ---
 
-Le refactoring est l'art d'améliorer du code, de transformer du code ordinaire en excellent code.
+Le refactoring c'est l'amélioration du code en consèrvant les fonctionnalitées déjà présente, on simplifie et on s'assure que le code sera facile a modifier dans le future.
 
 ### Code smells
 
@@ -21,11 +21,13 @@ Code smells communs:
 * Longue Classe
 * violation de Tell don't ask
 
-### Exemple présentée en classe
+### Quelques exemples
 
 Considérer le code suivant
 
-RapportDeCommande.java
+{% highlight java %}
+
+//RapportDeCommande.java
 
     import java.util.ArrayList;
     
@@ -57,7 +59,7 @@ RapportDeCommande.java
         }
     }
 
-Commande.java
+//Commande.java
     
     public class Commande {
         public int id;
@@ -71,6 +73,8 @@ Commande.java
         }
     }
     
+{% endhighlight %}
+
 La classe RapportDeCommande est assez simple, le code n'est pas si mal et tout fonctionne normalement.
 Mais il y a plusieurs "code smells".
 
@@ -78,6 +82,8 @@ La méthode totalDesVentesDansLIntervalDeTemps est le plus évident. Elle est be
 
 La méthode ne devrait pas avoir la responsabilité de produire l'arraylist commandesDansLIntervalDeTemps.
 On va créer une méthode privée pour s'en occuper.
+
+{% highlight java %}
 
     public int totalDesVentesDansLIntervalDeTemps(){
         int somme = 0;
@@ -98,6 +104,7 @@ On va créer une méthode privée pour s'en occuper.
 
         return commandesDansLIntervalDeTemps;
     }
+{% endhighlight %}
 
 Notre code est maintenant beaucoup plus facile à lire et à comprendre. On peu aussi facilement réutiliser commandesDansLIntervalDeTemps.
 
@@ -115,12 +122,17 @@ On devrait demander à l'objet commande "Est-ce que tu es dans cet interval" plu
 
 Le code est donc réécrit comme ceci:
 
+{% highlight java %}
+
     if(commande.dansInterval(date_debut,date_fin))
-.
+{% endhighlight %}
+
+{% highlight java %}
 
     public boolean dansInterval(int date_debut, int date_fin){
         return date >= date_debut && date <= date_fin;
     }
+{% endhighlight %}
 
 ### Data Clumps
 
@@ -129,6 +141,8 @@ Il y a un nom pour ce code smell: [Data Clumps](http://martinfowler.com/bliki/Da
 Quand 2 ou plusieurs données sont toujours utilisé ensemble, elles devraient probablement être regroupé dans une classe.
 
 On va donc créer une nouvelle classe Interval.
+
+{% highlight java %}
 
     public class Interval {
         public int date_debut;
@@ -139,6 +153,7 @@ On va donc créer une nouvelle classe Interval.
             this.date_fin = date_fin;
         }
     }
+{% endhighlight %}
 
 Et on va utiliser des objets de cette classe plutôt que date_debut et date_fin.
 
@@ -152,15 +167,20 @@ Est pourtant un moyen efficace de produire du code de qualité.
 Savoir si la commande est dans un intervalle n'est pas une bonne responsabilité pour la classe commande, cette responsabilité serait mieux dans la classe intervalle.
 En plus, on pourrait vouloir réutiliser intervalle avec d'autres objets.
 
+{% highlight java %}
+
     public boolean dansInterval(Interval interval){
         return interval.inclus(date);
     }
+{% endhighlight %}
 
-.
+{% highlight java %}
 
     public boolean inclus(int date){
         return date >= date_debut && date <= date_fin;
     }
+
+{% endhighlight %}
 
 ----
 
@@ -170,6 +190,8 @@ On peut imaginer vouloir calculer la somme d'un ensemble de commande dans un dif
 On va donc extraire une méthode totalDesVentes qui prend un ensemble (Array) de commandes en paramètre.
 
 Voici notre résultat final :
+
+{% highlight java %}
     
     import java.util.ArrayList;
     
@@ -207,6 +229,7 @@ Voici notre résultat final :
         }
     }
 
+{% endhighlight %}
 
 ### Référence:
 Articles:
@@ -223,5 +246,4 @@ Livres:
 * [Clean Code: A Handbook of Agile Software Craftsmanship](ttp://www.amazon.ca/gp/product/0132350882/ref=as_li_ss_tl?ie=UTF8&camp=15121&creative=390961&creativeASIN=0132350882&linkCode=as2&tag=alexcp-20)
 
 Vidéo:
-[Therapeutic Refactoring](http://www.confreaks.com/videos/1071-cascadiaruby2012-therapeutic-refactoring)
-
+* [Therapeutic Refactoring](http://www.confreaks.com/videos/1071-cascadiaruby2012-therapeutic-refactoring)
