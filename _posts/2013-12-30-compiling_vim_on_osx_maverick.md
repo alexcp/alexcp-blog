@@ -26,19 +26,33 @@ You then cd into the src directory
 
 You can now configure your vim installation, here is the configuration that I use.
 
+{% highlight bash %}
+
     ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-gui=no --disable-gpm --enable-multibyte
+
+{% endhighlight %}
 
 Normaly after you could just run
 
+{% highlight bash %}
+
     make && make install
 
+{% endhighlight %}
+
 Sadly, there is bug that prevent the compilation from working. I was getting this error relative to sigaltstack
+
+{% highlight bash %}
 
     os_unix.c:830:46: warning: declaration of 'struct sigaltstack' will not be visible outside of this function [-Wvisibility]
         extern int sigaltstack __ARGS((const struct sigaltstack *ss, struct sigaltstack *oss));
 
+{% endhighlight %}
+
 I found the fix on a [mailing list](https://groups.google.com/d/msg/vim_dev/YHo51sA46fU/cybmVD3v3SkJ)
 You need to perform the following change to the os_unix.c file
+
+{% highlight c %}
 
     +--- a/src/os_unix.c  2013-06-13 16:50:33.000000000 +0200
     ++++ b/src/os_unix.c  2013-06-13 16:50:40.000000000 +0200
@@ -58,5 +72,7 @@ You need to perform the following change to the os_unix.c file
     -       extern int sigaltstack __ARGS((const struct sigaltstack *ss, struct sigaltstack *oss));
     +    extern int sigaltstack __ARGS((const stack_t *restrict ss, stack_t *restrict oss));
      #  endif
+
+{% endhighlight %}
 
 You should then be able to compile vim without any issues, enjoy!
