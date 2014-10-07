@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ruby #tap
+title: "Ruby #tap method"
 category: ruby
 tag: blog
 ---
@@ -13,6 +13,8 @@ It's  especially useful when you need to populate an hash or a variable and retu
 
 For example you can turn this: 
 
+{% highlight ruby %}
+
         def test
           hash = {}
           [:one, :two, :three].each_with_index do |num, i|
@@ -21,7 +23,11 @@ For example you can turn this:
           hash
         end
 
+{% endhighlight %}
+
 into this:
+
+{% highlight ruby %}
 
       def test
         {}.tap do |hash|
@@ -30,5 +36,7 @@ into this:
           end
         end
       end
+
+{% endhighlight %}
 
 In my opinion, the second example is much better, it is easier to read and parse rapidly.
